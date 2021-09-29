@@ -1,4 +1,4 @@
-# SQLAlchemy-workbook
+# SQLAlchemy_workbook
 
 Workbook with functions to operate on PostgreSQL database.
 
