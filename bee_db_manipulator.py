@@ -1,8 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from bee_db_create_table import Bee
-from sqlalchemy.sql.expression import or_
-import psycopg2
 from typing import List
 
 
@@ -131,8 +129,8 @@ if __name__ == "__main__":
     session = Session()
     db_manipulator = DbManipulator(session)
     # db_manipulator.add_one("Lilianne",6, "U9")
-    # db_manipulator.get_filtered_data(Bee.size==4)
+    db_manipulator.get_filtered_data(Bee.size==4)
     # db_manipulator.get_filtered_data(or_(Bee.size==4, Bee.size==7))
     # db_manipulator.get_count_data(Bee.bee_type=="T7")
     # db_manipulator.update_bee_name(Bee.bee_type=="C1", "Jack")
-    db_manipulator.delete_bee(Bee.bee_type=="U9")
+    # db_manipulator.delete_bee(Bee.bee_type=="U9")
